@@ -37,12 +37,15 @@
 
             <div class="w3-content w3-container">
                 <p style="text-align:justify; font-size: 17px;">
-
-                The wet bulb temperature (WBT) accounts the dry air temperature and humidity, providing an estimate of the heat stress on humans. The WBT is generally lower than the dry air temperature. As the humidity increases, the WBT will approximate the dry air temperature. This quantity is crucial, since as the air becomes saturated with water (high humidity), less evaporation will occur. In other words, the thermoregulation of the human body temperature through evapotranspiration could increase the risk of heat stroke and hyperthermia. This visualisation explore the evolution of wet bulb temperature under "business as usual" emissions (RCP 8.5), with a particular focus on the alarming threshold of 35°C at which humans experience hyperthermia, an imminent risk to human health and large centers of population. For example, Sherwood & Huber (2010) reports that an increase of the WBT of 11-12°C would cover the majority of the human population as currently distributed.
+                The wet bulb temperature (WBT) accounts the dry air temperature and humidity, providing an estimate of the heat stress on humans. The WBT is generally lower than the dry air temperature. As the humidity increases, the WBT will approximate the dry air temperature. This quantity is crucial, since as the air becomes saturated with water (high humidity), less evaporation will occur. In other words, the thermoregulation of the human body temperature through evapotranspiration could increase the risk of heat stroke and hyperthermia.
                 </p>
 
                 <p style="text-align:justify; font-size: 17px;">
-                The Wet bulb formula was computed using the julia package <code>Psychro</code> that follows the definition proposed by Davies-Jones (2008), where:
+                This visualisation explore the evolution of wet bulb temperature under "business as usual" emissions (RCP 8.5), with a particular focus on the alarming threshold of 35°C at which humans experience hyperthermia, an imminent risk to human health and large centers of population. For example, Sherwood & Huber (2010) reports that an increase of the WBT of 11-12°C would cover the majority of the human population as currently distributed.
+                </p>
+
+                <p style="text-align:justify; font-size: 17px;">
+                The Wet bulb formula was computed using the julia package <code>Psychro.jl</code> that follows the definition proposed by Davies-Jones (2008):
                 </p>
                 <div id="formula">
                     \[ T_w( T_d, RH,P) \]
@@ -53,10 +56,8 @@
                 </p>
 
                 <h2>Risk</h2>
-                <p style="text-align:justify; font-size: 17px;">
-                
-
-                A "critical" WBT for humans, the temperature at which a healthy person could survive for only six hours is usually considered to be 35°C. Under the current climate scenario, by the end of the century there will some regions that during the northern hemisphere summer will surpass consistently this 35°C threshold. 
+                <p style="text-align:justify; font-size: 17px;">      
+                A "critical" WBT for humans, the temperature at which a healthy person could survive for only six hours is usually considered to be 35°C. Under the current climate scenario, by the end of the century there will some regions that during the northern hemisphere summer will surpass consistently this 35°C threshold.
                 
                 <div class="w3-display-container  w3-padding-16">
                     <img src="./resources/WB_temp_bands_threshold.png" class="w3-image" alt="Wet-Bulb">

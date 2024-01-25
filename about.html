@@ -37,21 +37,32 @@
 
             <div class="w3-content w3-container">
                 <p style="text-align:justify; font-size: 17px;">
-                The wet bulb temperature (WBT) accounts the dry air temperature and humidity, providing an estimate of the heat stress on humans. The WBT is generally lower than the dry air temperature. As the humidity increases, the WBT will approximate the dry air temperature. This quantity is crucial, since as the air becomes saturated with water (high humidity), less evaporation will occur. In other words, the thermoregulation of the human body temperature through evapotranspiration could increase the risk of heat stroke and hyperthermia.
+                This visualisation explores how the wet bulb temperature (WBT) will evolve in a future climate. The WBT is a method to assess the heat stress conditions. When the wet bulb temperature rises to above the temperature of the human body, sweat is no longer able to evaporate which means that the human body is unable to cool itself down. Once this wet bulb temperature is breached the human body will begin to overheat with imminent fatal risks.Exposure to such conditions for more than 6hrs could be fatal to humans!
+                </p>
+                <p style="text-align:justify; font-size: 17px;"></p>
+                We explore how WBT will evolve under "business as usual" emissions (RCP 8.5), with a particular focus on the alarming threshold of 35°C at which humans experience hyperthermia. In other words, the thermoregulation of the human body temperature through evapotranspiration increases the risk of death. This will become an imminent risk to human health, particularly in large centres of population.
+                </p>
+                
+                <p style="text-align:justify; font-size: 17px;"></p>
+                Sherwood & Huber (2010) report that an increase of the WBT of 11-12°C would cover the majority of the human population as currently distributed over the globe.
                 </p>
 
                 <p style="text-align:justify; font-size: 17px;">
-                This visualisation explore the evolution of wet bulb temperature under "business as usual" emissions (RCP 8.5), with a particular focus on the alarming threshold of 35°C at which humans experience hyperthermia, an imminent risk to human health and large centers of population. For example, Sherwood and Huber (2010) report that an increase of the WBT of 11-12°C would cover the majority of the human population as currently distributed.
+                The Wet bulb formula was computed using the julia package <code>Psychro</code> that follows the definition proposed by Davies-Jones (2008), where:
                 </p>
-
+                <div id="formula">
+                    \[ T_w( T_d, RH,P) \]
+                </div>
                 <p style="text-align:justify; font-size: 17px;">
-                The Wet bulb formula was computed using the julia package <code>Psychro.jl</code> that follows the definition proposed by Davies-Jones (2008) according which WBT is a function of the dry-air surface temperature, the relative humidity, and the surface pressure.
-                For simplicity, we used a constant surface pressure <span>\(101325.0 Pa \)</span>.
+                where <span>\( T_w \)</span> is the wet-bulb temperature in degrees Celsius, <span>\( T \)</span> is the dry air temperature in degrees Celsius, <span>\( RH \)</span> is the relative humidity, and <span>\( P \)</span> is the pressure. 
+                For simplicity, we define a constant <span>\( P = 101325.0 Pa \)</span>
                 </p>
 
                 <h2>Risk</h2>
-                <p style="text-align:justify; font-size: 17px;">      
-                A "critical" WBT for humans, the temperature at which a healthy person could survive for only six hours is usually considered to be 35°C. Under the current climate scenario, by the end of the century there will some regions that during the northern hemisphere summer will consistently surpass this 35°C threshold.
+                <p style="text-align:justify; font-size: 17px;">
+                
+
+                A "critical" WBT for humans, the temperature at which a healthy person could survive for only six hours is usually considered to be 35°C. Under the current climate scenario, by the end of the century there will some regions that during the northern hemisphere summer will surpass consistently this 35°C threshold. 
                 
                 <div class="w3-display-container  w3-padding-16">
                     <img src="./resources/WB_temp_bands_threshold.png" class="w3-image" alt="Wet-Bulb">
@@ -63,10 +74,10 @@
                     <img src="./resources/max_Risk_wet_bulb_maps.png" class="w3-image" alt="Wet-Bulb" style="width: 80%; text-align: center;">
                 </div>
 
-                White areas indicating wet bulb temperatures below 25°C that are likely to not represent any risk to human health. Moderate risk zones appear between 25°C and 30°C; these zones extend in much of the tropical areas. Finally, high-risk zones correspond to monthly mean wet bulb temperature above 30°C, where inhabitants in these areas face an abrupt risk of heat-related illnesses. 
-                Note that a month that has an averaged wet-bulb temperature above 30°C, implies that the wet-bulb temperature during several days of those months is above 35°C.
+                White areas indicating wet bulb temperatures below 25°C are likely to not represent risk to human health. Moderate risk zones appear between 25°C - 30°C, that extend in much of the tropical areas. Finally, High-Risk Zones correspond to monthly mean wet bulb temperature above 30°C, where inhabitants in these areas face an abrupt risk of heat-related illnesses. 
+                Note that a month that has an averaged wet-bulb temperature above 30°C, means that the temperature during several days of those months will be above 35°C.
 
-                The surface area covered by regions with temperatures above 30°C is shown below. This surface area starts to increase significantly after the middle of this century (2050). In summer, the maxima area coverage is 1 million \(km^2\), that is approximately the area of Egypt or the combined areas of the states of Texas and New Mexico.
+                The surface area covered by regions with temperatures above 30°C is shown below. The surface area starts to increase significantly after the mid century (2050). In summer, the maxima area coverage is 1 million \(km^2\) approximately the area surface of Egypt.
 
                 <div class="w3-display-container w3-padding-16">
                     <img src="./resources/area_with_dangerous_WBtemp_80p.png" class="w3-image" alt="Wet-Bulb">
@@ -82,10 +93,10 @@
                 <h2>References</h2>
                 <ul>
                     <li>
-                        Sherwood, S. C. & Huber, M. (2010) An adaptability limit to climate change due to heat stress. <i>Proc. Natl. Acad. Sci.</i>, <b>107</b>, 9552-9555, doi:<a href="https://doi.org/10.1073/pnas.0913352107" target="_blank">10.1073/pnas.0913352107</a>.
+                        Sherwood, S. C. & Huber, M. An adaptability limit to climate change due to heat stress. Proc. Natl. Acad. Sci. 107, 9552-9555 (2010).
                     </li>
                     <li>
-                        Davies-Jones, R. (2008) An efficient and accurate method for computing the wet-bulb temperature along pseudoadiabats. <i>Mon. Weather Rev.</i>, <b>136</b>, 2764–2785, doi:<a href="https://doi.org/10.1175/2007MWR2224.1" target="_blank">10.1175/2007MWR2224.1</a>.
+                        Davies-Jones, R. An Efficient and Accurate Method for Computing the Wet-Bulb Temperature along Pseudoadiabats. Mon. Weather Rev. 136, 2764–2785 (2008).
                     </li>
 
                 </ul>

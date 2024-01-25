@@ -24,7 +24,7 @@ code {
 .title{
   left: 40px !important
 }
-.bgimg, .bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg, .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -44,12 +44,26 @@ code {
     /* background-color: #103410; */
 }
 
+
 .bgimg-3 {
   min-height: 25vh;
   background-image: url('../../resources/WB_temp_bands.png');
   /* background-color: #103410; */
 }
 
+.bgimg-4 {
+  min-height: 90vh;
+  background-image: url('../../resources/wet_bulb_2024_0001_LR.png');
+  width: 100%;
+  /* background-color: #2196F3; */
+}
+
+.bgimg-5 {
+  min-height: 90vh;
+  background-image: url('../../resources/wet_bulb_2100_0001_LR.png');
+  width: 100%;
+  /* background-color: #103410; */
+}
 
 .year_l, .year_r {
   bottom:20%;
